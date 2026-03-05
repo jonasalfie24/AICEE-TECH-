@@ -1,0 +1,40 @@
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; background: #f9f9f9; border-radius: 8px; }
+        .header { background: #7647b5; color: white; padding: 30px; text-align: center; border-radius: 8px 8px 0 0; }
+        .content { background: white; padding: 30px; border-radius: 0 0 8px 8px; }
+        .button { display: inline-block; background: #7647b5; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; margin-top: 20px; }
+        .footer { text-align: center; padding: 20px; color: #666; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Account Approved!</h1>
+        </div>
+        <div class="content">
+            <p>Dear <?php echo htmlspecialchars($userName); ?>,</p>
+            
+            <p>Congratulations! Your account has been approved by the administrators.</p>
+            
+            <p>You can now access the Aicee-Tech Medical Records Management System with your credentials:</p>
+            <ul>
+                <li><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></li>
+            </ul>
+            
+            <p>You can now log in and start submitting and managing your medical records.</p>
+            
+            <a href="<?php echo htmlspecialchars($loginUrl); ?>" class="button">Log In Now</a>
+            
+            <p style="margin-top: 30px;">If you have any questions or need assistance, please contact your administrator.</p>
+            
+            <p>Best regards,<br>Aicee-Tech Administrator Team</p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 Aicee-Tech Medical Records Management System. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
